@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>M'aar'vel Tracker</title>
+</head>
+<body>
+    <main>
+        <div class="flex-row align-center justify-center min-100-vh bg-primary">
+         <div class="col-12 col-md-9 flex-column align-center bg-light p-5">
+           <div class="card-search-engine">
+            <h1 class="title">M'aar'vel Tracker</h1>
+            <form id ="user-form" class ="form w-100">
+                <input 
+                id = "nameInput" class="form-input w-100" type="text" placeholder="Search!"
+                />
+                <fieldset>
+                    <select name="format-input" id="format w-100">
+                      <option value="" disabled selected>Select a format..</option>
+                      <option value="comics">Comics</option>
+                      <option value="events">Events</option>
+                      <option value="tv-series">Tv Series</option>
+                      <option value="movies">Movies</option>
+                    </select>
+                </fieldset>
+            
+                <button class="button is-success">Hulk Smash Me!</button>
+              
+            </form>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
