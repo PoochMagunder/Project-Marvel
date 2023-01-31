@@ -5,3 +5,7 @@ fieldset {
   .overflow {
     height: 200px;
   }
+
+  .title{
+    font-family: 'Arimo', sans-serif;
+  }
