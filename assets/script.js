@@ -1,19 +1,24 @@
 // Keys to be attached to get the response from Marvel server
 const publicKey = "14d27cc0e17db4c46e2a1c8c038702f8";
 const privateKey = "dd786203735e0d58df194e5f71e0a50fbc7df72a";
-const apiUrl = "https://gateway.marvel.com/v1/public/characters?";
+const apiUrl = "https://gateway.marvel.com:443/v1/public/characters?";
+
+
 
 //fetch data from Marvel server
 function fetchData(name) {
   const ts = Date.now();
+  console.log(ts)
   const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
   const url = `${apiUrl}ts=${ts}&apikey=${publicKey}&hash=${hash}&name=${name}`;
+  console.log(url)
 
   //returns a promise that fetches the data from the url, processes json and updates page elements
 
   //ids for name, description and image
   return fetch(url)
     .then(response => {
+        console.log(response)
       if (response.ok) {
         return response.json();
       }
