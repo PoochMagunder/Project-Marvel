@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Keys to be attached to get the response from Marvel server
 const publicKey = "14d27cc0e17db4c46e2a1c8c038702f8";
 const privateKey = "dd786203735e0d58df194e5f71e0a50fbc7df72a";
@@ -77,3 +78,9 @@ document.getElementById("button").addEventListener("click", function(event) {
   //  });
  //   req.send(null);
 //};
+=======
+$( function() {
+    $( "#format" ).selectmenu();
+
+  } );
+>>>>>>> e24d88cc95e96dfb339e5739ab69086363b55917

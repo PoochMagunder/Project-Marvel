@@ -1,0 +1,11 @@
+fieldset {
+    border: 0;
+  }
+  
+  .overflow {
+    height: 200px;
+  }
+
+  .title{
+    font-family: 'Arimo', sans-serif;
+  }
