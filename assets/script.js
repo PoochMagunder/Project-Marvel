@@ -38,6 +38,11 @@ document.getElementById("button").addEventListener("click", function(event) {
   event.preventDefault();
 });
 
+$( function() {
+  $( "#format" ).selectmenu();
+
+} );
+
 
 //document.addEventListener('DOMContentLoaded', submitButton)
 //var apiKey="14d27cc0e17db4c46e2a1c8c038702f8"
