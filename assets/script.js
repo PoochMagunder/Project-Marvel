@@ -78,9 +78,3 @@ document.getElementById("button").addEventListener("click", function(event) {
   //  });
  //   req.send(null);
 //};
-=======
-$( function() {
-    $( "#format" ).selectmenu();
-
-  } );
->>>>>>> e24d88cc95e96dfb339e5739ab69086363b55917
