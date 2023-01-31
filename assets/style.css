@@ -1,4 +1,6 @@
-fieldset {
+
+ 
+ fieldset {
     border: 0;
   }
   
@@ -6,6 +8,19 @@ fieldset {
     height: 200px;
   }
 
+  body{
+    height: 100vh;
+  }
+
+  main{
+    height: 100vh;
+    
+  }
+
   .title{
-    font-family: 'Arimo', sans-serif;
+   font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  section #listContainer{
+    height: 100vh;
   }
