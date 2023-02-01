@@ -5,43 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
-    <title>M'aar'vel Tracker</title>
+    <title>M'arr'vel Tracker</title>
 </head>
 
 <body>
-        <main>
-            <section class="hero is-danger is-medium">
-                <div class="hero-body">
-                    <div class="container has-text-centered is-outlined">
-                        <p class="title">M'aar'vel Tracker</p>
-                        <form id="user-form" class="form w-100">
-                            <input id="heroName" class="form-input w-100" type="text" placeholder="Search!" />
-                            <fieldset>
-                                <select name="format-input" id="format w-100">
-                                    <option value="" disabled selected>Select a format..</option>
-                                    <option value="comics">Comics</option>
-                                    <option value="events">Events</option>
-                                    <option value="tv-series">Tv Series</option>
-                                    <option value="movies">Movies</option>
-                                </select>
-                            </fieldset>
 
-                            <button id ="button" class="button is-warning is-outlined">Hulk Smash Me!</button>
+    <main>
+        <section class="hero is-danger is-medium">
+            <div class="hero-body">
+                <div class="container has-text-centered is-outlined">
+                    <p class="title">M'arr'vel Tracker</p>
+                    <form id="user-form" class="form w-100">
+                        <input id="nameInput" class="form-input w-100" type="text" placeholder="Search!" />
+                        <fieldset>
+                            <select name="format-input" id="format w-100">
+                                <option value="" disabled selected>Select a format..</option>
+                                <option value="comics">Comics</option>
+                                <option value="events">Events</option>
+                                <option value="tv-series">Tv Series</option>
+                                <option value="movies">Movies</option>
+                            </select>
+                        </fieldset>
 
-                        </form>
-                    </div>
+                        <button class="button is-warning is-outlined">Hulk Smash Me!</button>
+
+                    </form>
                 </div>
-            </section>
-        </main>
-        <footer class="container has-text-centered">
-            <img src ="assets/Images/Marvel_Cinematic_Universe.png">
-        </footer>
+            </div>
+        </section>
+    </main>
+    <footer class="container has-text-centered">
+        <img src="assets/Images/Marvel_Cinematic_Universe.png">
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
