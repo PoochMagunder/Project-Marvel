@@ -29,7 +29,7 @@
   position: absolute;
   right: -78px;
   bottom: -436px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   border-left-style: solid;
   border-left-color: hsl(348, 100%, 61%);
@@ -57,8 +57,15 @@
 
 img{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 60px;
+  left: 40px;
   border-style: solid;
   border-color: hsl(348, 100%, 61%);
+  max-width: 300px;
+  max-height: 300px;
+}
+
+ p{
+  margin: auto;
+  max-width: 400px;
 }
