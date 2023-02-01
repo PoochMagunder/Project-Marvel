@@ -29,9 +29,6 @@
   }
 
 #characterInfo{
-  position: absolute;
-  right: -78px;
-  bottom: -436px;
   /* width: 100%; */
   height: 100vh;
   border-left-style: solid;
