@@ -24,3 +24,39 @@
   section #listContainer{
     height: 100vh;
   }
+
+#characterInfo{
+  position: absolute;
+  right: -110px;
+  top: 90px;
+  width: 100%;
+  height: 50vh;
+  
+}
+
+#upcomingProjects{
+  position: absolute;
+  right: -110px;
+  top: 480px;
+  width: 100%;
+  height: 50vh;
+}
+
+#existingMedia{
+  position: absolute;
+  right: -110px;
+  top: 870px;
+  width: 100%;
+  height: 50vh;
+
+}
+
+
+
+img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-style: solid;
+  border-color: hsl(348, 100%, 61%);
+}

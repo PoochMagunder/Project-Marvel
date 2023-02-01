@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./assets/style.css">
-    <title>M'aar'vel Tracker</title>
+    <title>M'arr'vel Tracker</title>
 </head>
 
 <body>
-    <h1 class="title is-1 p-2 has-text-white has-background-danger">M'aar'vel Tracker</h1>
+    <h1 class="title is-1 p-2 has-text-white has-background-danger">M'arr'vel Tracker</h1>
     <main>
         <section class="columns is-vcentered is-mobile">
                 <div class=" column is-2 has-text-centered m-2 has-background-dark">
@@ -36,9 +36,21 @@
                 </div>
         </section>
         <section id="listContainer" class="column is-2 has-text-centered p-2 has-background-dark" style="height:80%;">
-            <h2 class="title is-4 p-2 has-text-white">Previous Searches:</h2>      
+            <h2 class="title is-4 p-2 has-text-white is-underlined">Previous Searches:</h2>      
                 <div class="listHolder"></div>    
         </section>
+        <aside>
+            <div id = "characterInfo" class="container has-background-dark" >
+                <h2 class="title has-text-white has-text-centered is-underlined is-3 p-2">Character Info:</h2>
+                <img src =./assets/images/200x200.png>
+            </div>
+            <div id="upcomingProjects" class="container has-background-dark">
+                <h2 class="title has-text-white has-text-centered is-underlined is-3 p-2">Upcoming Projects:</h2>
+            </div>
+            <div id="existingMedia" class="container has-background-dark">
+                <h2 class="title has-text-white has-text-centered is-underlined is-3 p-2">Existing Media:</h2>
+            </div>
+        </aside>
        
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
