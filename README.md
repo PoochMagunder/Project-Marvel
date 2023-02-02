@@ -37,6 +37,14 @@ A website for Marvel fans to stay updated about up and coming projects of their 
 - Marvel API
 - Open API
 
+## Credits
+
+Autocomplete 
+https://www.w3schools.com/howto/howto_js_autocomplete.asp
+
+Marvel Developer Portal
+https://developer.marvel.com/docs#!/public/getCreatorCollection_get_0
+
 ## License
 
 This project is licensed under the MIT License.
