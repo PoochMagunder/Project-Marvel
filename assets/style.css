@@ -8,14 +8,16 @@
     height: 200px;
   }
 
-  body{
+  /* body{
     height: 100vh;
+    width: 100vw;
   }
 
   main{
     height: 100vh;
+    width: 100vw;
     
-  }
+  } */
 
   .title{
    font-family: 'PT Sans Narrow', sans-serif;
@@ -25,14 +27,22 @@
     height: 100vh;
     border-right-style: solid;
     border-right-color: hsl(348, 100%, 61%);
-    
+    border-bottom-style: solid;
+    border-bottom-color: hsl(348, 100%, 61%);
+    border-top-style: solid;
+    border-top-color: hsl(348, 100%, 61%);
   }
 
 #characterInfo{
-  /* width: 100%; */
+  width: 85vw;
   height: 100vh;
   border-left-style: solid;
   border-left-color: hsl(348, 100%, 61%);
+  border-top-style: solid;
+  border-top-color: hsl(348, 100%, 61%);
+  border-bottom-style: solid;
+    border-bottom-color: hsl(348, 100%, 61%);
+  
   
 }
 
@@ -56,16 +66,72 @@
 
 
 img{
-  position: absolute;
-  top: 60px;
-  left: 40px;
+  
   border-style: solid;
   border-color: hsl(348, 100%, 61%);
-  max-width: 300px;
-  max-height: 300px;
+  background-size: contain;
+  max-width: 350px;
+  max-height: 350px;
+
+  
+ 
 }
 
  p{
-  margin: auto;
-  max-width: 400px;
+ margin: auto;
+  max-width: 1000px;
+}
+
+@media screen and (max-width: 1547px){
+  p{
+    max-width: 800px;
+  }
+}
+
+
+@media screen and (max-width: 1186px){
+      p{
+        max-width: 400px;
+      }
+}
+
+@media screen and (max-width: 768px){
+  div #characterInfo{
+    width: 102vw;
+    height: 130vh;
+  }
+  img{
+    max-width: 100vw;
+    max-height: 763px;
+  }
+  #listContainer{
+    height: 23vh;
+  }
+}
+
+@media screen and (max-width: 576px){
+  p{
+    max-width: 250px;
+  }
+
+  div #characterInfo{
+    width: 103vw;
+    height: 115vh;
+  }
+
+  img{
+    max-width: 99vw;
+    max-height: 763px;
+  }
+
+  #listContainer{
+    height: 23vh;
+  }
+}
+
+@media screen and (max-width: 390px){
+  img{
+    max-width: 340px;
+    max-height: 343px;
+  }
 }
