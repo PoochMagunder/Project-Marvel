@@ -1,39 +1,44 @@
-
- 
- fieldset {
-    border: 0;
-  }
+/* Icon */
+.material-symbols-outlined {
+  font-size: 100px;
+  margin: 10px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48,
   
-  .overflow {
-    height: 200px;
-  }
+}
 
-  /* body{
-    height: 100vh;
-    width: 100vw;
-  }
+/* Character Input section */
+fieldset {
+  border: 0;
+}
 
-  main{
-    height: 100vh;
-    width: 100vw;
-    
-  } */
+.overflow {
+  height: 200px;
+}
 
-  .title{
-   font-family: 'PT Sans Narrow', sans-serif;
-  }
+.title {
+  font-family: "PT Sans Narrow", sans-serif;
+}
+/* Saved character list */
+#listContainer {
+  height: 100vh;
+  border-right-style: solid;
+  border-right-color: hsl(348, 100%, 61%);
+  border-bottom-style: solid;
+  border-bottom-color: hsl(348, 100%, 61%);
+  border-top-style: solid;
+  border-top-color: hsl(348, 100%, 61%);
+}
 
-#listContainer{
-    height: 100vh;
-    border-right-style: solid;
-    border-right-color: hsl(348, 100%, 61%);
-    border-bottom-style: solid;
-    border-bottom-color: hsl(348, 100%, 61%);
-    border-top-style: solid;
-    border-top-color: hsl(348, 100%, 61%);
-  }
+.is-clickable {
+  cursor: pointer;
+}
 
-#characterInfo{
+/* Character Information Section */
+#characterInfo {
   width: 85vw;
   height: 100vh;
   border-left-style: solid;
@@ -41,12 +46,24 @@
   border-top-style: solid;
   border-top-color: hsl(348, 100%, 61%);
   border-bottom-style: solid;
-    border-bottom-color: hsl(348, 100%, 61%);
-  
-  
+  border-bottom-color: hsl(348, 100%, 61%);
 }
 
-#upcomingProjects{
+img {
+  border-style: solid;
+  border-color: hsl(348, 100%, 61%);
+  background-size: contain;
+  max-width: 350px;
+  max-height: 350px;
+}
+
+p {
+  margin: auto;
+  max-width: 1000px;
+}
+
+/* Future Features */
+/* #upcomingProjects{
   position: absolute;
   right: -110px;
   top: 480px;
@@ -61,79 +78,59 @@
   width: 100%;
   height: 50vh;
 
-}
+} */
 
-.is-clickable {
-  cursor: pointer;
-}
-
-
-img{
-  
-  border-style: solid;
-  border-color: hsl(348, 100%, 61%);
-  background-size: contain;
-  max-width: 350px;
-  max-height: 350px;
-
-  
- 
-}
-
- p{
- margin: auto;
-  max-width: 1000px;
-}
-
-@media screen and (max-width: 1547px){
-  p{
+@media screen and (max-width: 1547px) {
+  p {
     max-width: 800px;
   }
 }
 
-
-@media screen and (max-width: 1186px){
-      p{
-        max-width: 400px;
-      }
+@media screen and (max-width: 1186px) {
+  p {
+    max-width: 400px;
+  }
 }
 
-@media screen and (max-width: 768px){
-  div #characterInfo{
+@media screen and (max-width: 768px) {
+  div #characterInfo {
     width: 102vw;
     height: 130vh;
   }
-  img{
+  img {
     max-width: 100vw;
     max-height: 763px;
   }
-  #listContainer{
+  #listContainer {
     height: 23vh;
+  }
+  .material-symbols-outlined{
+    margin: auto;
   }
 }
 
-@media screen and (max-width: 576px){
-  p{
+@media screen and (max-width: 576px) {
+  p {
     max-width: 250px;
   }
 
-  div #characterInfo{
+  div #characterInfo {
     width: 103vw;
     height: 115vh;
   }
 
-  img{
+  img {
     max-width: 99vw;
     max-height: 763px;
   }
 
-  #listContainer{
+  #listContainer {
     height: 23vh;
   }
 }
 
-@media screen and (max-width: 390px){
-  img{
+@media screen and (max-width: 390px) {
+  img {
     max-width: 340px;
     max-height: 343px;
   }
