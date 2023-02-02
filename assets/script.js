@@ -41,7 +41,7 @@ function fetchData(nameStartsWith) {
 // uses open AI model engine to execute 
 async function convertToPirateLanguage(pDescription) {
   const inputText = "convert this to pirate-language";
-  const openKey = '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';
+  const openKey = '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';
   const endpoint = "https://api.openai.com/v1/completions "
   const payload = {
     "model": "text-davinci-003",
@@ -64,6 +64,9 @@ async function convertToPirateLanguage(pDescription) {
     .then(response => {
       return response.json();
     });
+    console.log(pDescription);
+    console.log(payload.prompt);
+    console.log(response);
   console.log(response.choices[0].text);
   let description = document.getElementById("description");
   // sets variable to json data's specific response
