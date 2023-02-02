@@ -45,6 +45,9 @@ https://www.w3schools.com/howto/howto_js_autocomplete.asp
 Marvel Developer Portal
 https://developer.marvel.com/docs#!/public/getCreatorCollection_get_0
 
+Fetch API
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
 ## License
 
 This project is licensed under the MIT License.
