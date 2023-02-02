@@ -38,32 +38,31 @@ function fetchData(nameStartsWith) {
 }
 
 // function that takes the characters description and converts in like it was written by a pirate
-// uses open AI model engine to execute 
+// uses open AI model engine to execute
 async function convertToPirateLanguage(pDescription) {
   const inputText = "convert this to pirate-language";
-  const openKey = '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';
-  const endpoint = "https://api.openai.com/v1/completions "
+  const openKey = "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";
+  const endpoint = "https://api.openai.com/v1/completions ";
   const payload = {
-    "model": "text-davinci-003",
-    "prompt": "Translate this into pirate-language\n\n" + pDescription,
-    "temperature": 0.3,
-    "max_tokens": 100,
-    "top_p": 1,
-    "frequency_penalty": 0,
-    "presence_penalty": 0
-  }
+    model: "text-davinci-003",
+    prompt: "Translate this into pirate-language\n\n" + pDescription,
+    temperature: 0.3,
+    max_tokens: 100,
+    top_p: 1,
+    frequency_penalty: 0,
+    presence_penalty: 0,
+  };
 
   const response = await fetch(endpoint, {
     method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      "Authorization": `Bearer ${openKey}`,
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${openKey}`,
     },
     body: JSON.stringify(payload),
-  })
-    .then(response => {
-      return response.json();
-    });
+  }).then((response) => {
+    return response.json();
+  });
   console.log(response.choices[0].text);
   let description = document.getElementById("description");
   // sets variable to json data's specific response
@@ -72,10 +71,8 @@ async function convertToPirateLanguage(pDescription) {
   description.textContent = newDescription;
 }
 
-
 // Get a reference to the search input element
 const searchInput = document.getElementById("heroName");
-
 
 //     .catch(error => console.log("There was a problem with the fetch operation: ", error));
 // }
@@ -120,13 +117,11 @@ function loadStorage() {
     listItem.innerHTML = search;
     listHolder.appendChild(listItem);
   });
-};
-
+}
 
 var searchHistoryList = function (heroName) {
   // remove any existing entries with the same hero name
   $('.past-search:contains("' + heroName + '")').remove();
-
 
   // append entry to container
   searchEntryContainer.append(searchHistoryEntry);
@@ -151,13 +146,8 @@ $(".listHolder").on("click", "div", function () {
   var previousSearchName = $(this).text();
   fetchData(previousSearchName);
 
-
   //
   var previousSearchName = $(this);
 });
 
 loadStorage();
-
-
-
-
