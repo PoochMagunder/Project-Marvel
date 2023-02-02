@@ -2,12 +2,7 @@
 .material-symbols-outlined {
   font-size: 100px;
   margin: 10px;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48,
-  
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 /* Character Input section */
@@ -104,7 +99,7 @@ p {
   #listContainer {
     height: 23vh;
   }
-  .material-symbols-outlined{
+  .material-symbols-outlined {
     margin: auto;
   }
 }
