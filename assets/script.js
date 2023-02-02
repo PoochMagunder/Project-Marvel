@@ -23,6 +23,10 @@ function fetchData(nameStartsWith) {
       let description = document.getElementById("description");
       let thumbnail = document.getElementById("thumbnail");
 
+      // call pirate function to get the updated description
+      let pDescription = ch_data.data.results[0].description;
+      convertToPirateLanguage(pDescription);
+
       // set the name, description, and thumbnail elements
       heroName.textContent = ch_data.data.results[0].name;
       description.textContent = ch_data.data.results[0].description;
@@ -32,6 +36,42 @@ function fetchData(nameStartsWith) {
         ch_data.data.results[0].thumbnail.extension;
     });
 }
+
+// function that takes the characters description and converts in like it was written by a pirate
+// uses open AI model engine to execute 
+async function convertToPirateLanguage(pDescription) {
+  const inputText = "convert this to pirate-language";
+  const openKey = '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';
+  const endpoint = "https://api.openai.com/v1/completions "
+  const payload = {
+    "model": "text-davinci-003",
+    "prompt": "Translate this into pirate-language\n\n" + pDescription,
+    "temperature": 0.3,
+    "max_tokens": 100,
+    "top_p": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0
+  }
+
+  const response = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      "Authorization": `Bearer ${openKey}`,
+    },
+    body: JSON.stringify(payload),
+  })
+    .then(response => {
+      return response.json();
+    });
+  console.log(response.choices[0].text);
+  let description = document.getElementById("description");
+  // sets variable to json data's specific response
+  const newDescription = response.choices[0].text;
+  // changes description to updated pirate description
+  description.textContent = newDescription;
+}
+
 
 // Get a reference to the search input element
 const searchInput = document.getElementById("heroName");
@@ -46,12 +86,12 @@ document.getElementById("button").addEventListener("click", function (event) {
   fetchData(name);
   event.preventDefault();
   saveToStorage(name);
-//clear search input
+  //clear search input
   document.getElementById("heroName").value = "";
 });
 
- // reset search input
- $("#heroName").val("");
+// reset search input
+$("#heroName").val("");
 
 var saveToStorage = function (newHero) {
   console.log("Saving to storage!");
@@ -64,7 +104,7 @@ var saveToStorage = function (newHero) {
   savedSearchHistory.push(newHero);
   console.log("savedSearchHistory: ", savedSearchHistory);
   localStorage.setItem("savedSearches", JSON.stringify(savedSearchHistory));
-loadStorage();
+  loadStorage();
 };
 
 //local Storage on load
@@ -74,7 +114,7 @@ function loadStorage() {
   listHolder.innerHTML = "";
 
   // Loop through the saved searches and add each one to the listHolder element
-  
+
   savedSearches.forEach((search) => {
     let listItem = document.createElement("div");
     listItem.innerHTML = search;
@@ -110,7 +150,7 @@ $(".listHolder").on("click", "div", function () {
   // get text (hero name) of entry and pass it as a parameter to display hero details
   var previousSearchName = $(this).text();
   fetchData(previousSearchName);
-  
+
 
   //
   var previousSearchName = $(this);
