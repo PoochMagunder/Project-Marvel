@@ -63,6 +63,9 @@
 
 }
 
+.is-clickable {
+  cursor: pointer;
+}
 
 
 img{

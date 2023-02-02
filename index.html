@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/autocomplete.css">
     <title>M'arr'vel Tracker</title>
 </head>
 
 <body>
 
     <main>
-        <section class="hero is-danger is-medium">
+        <section class="hero is-danger is-medium"> 
             <div class="hero-body">
                 <div class="container has-text-centered m-3">
                     <p class="title">M'arr'vel Tracker</p>
@@ -32,7 +33,7 @@
                                 <option value="movies">Movies</option>
                             </select>
                         </fieldset>
-                        <button id= "button" class="button is-warning is-outlined">Hulk Smash Me!</button>
+                        <button id= "button" type="submit" class="button is-warning is-outlined">Hulk Smash Me!</button>
                     </form>
                 </div>
             </div>
@@ -40,7 +41,7 @@
         <section class="columns">
         <div id="listContainer" class="column is-2 ml-3 mt-3 has-background-dark">
             <h2 class="title is-4 p-2 has-text-white has-text-centered is-underlined">Previous Searches:</h2>      
-                <div class="listHolder"></div>    
+                <div class="listHolder has-text-white is-clickable"></div>    
         </div>
         <div>
             <div id = "characterInfo" class="column is-full mt-3 has-background-dark" >
@@ -59,7 +60,11 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+<script src="./assets/autocomplete.js"> </script>
     <script src="./assets/script.js"></script>
+    <script>
+        autocomplete(document.getElementById("heroName"), heroesArr);
+    </script>
 </body>
 
 </html>
