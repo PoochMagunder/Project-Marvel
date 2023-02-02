@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/autocomplete.css">
     <title>M'arr'vel Tracker</title>
 </head>
 
@@ -59,7 +60,11 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+<script src="./assets/autocomplete.js"> </script>
     <script src="./assets/script.js"></script>
+    <script>
+        autocomplete(document.getElementById("heroName"), heroesArr);
+    </script>
 </body>
 
 </html>
