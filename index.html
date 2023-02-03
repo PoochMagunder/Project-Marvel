@@ -1,70 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="./assets/autocomplete.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/autocomplete.css" />
     <title>M'arr'vel Tracker</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <main>
-        <section class="hero is-danger is-medium"> 
-            <div class="hero-body">
-                <div class="container has-text-centered m-3">
-                    <p class="title">M'arr'vel Tracker</p>
-                    <form id="user-form" class="form w-100">
-                        <input id="heroName" class="form-input w-100" type="text" placeholder="Search!" />
-                        <fieldset>
-                            <select name="format-input" id="format w-100">
-                                <option value="" disabled selected>Select a format..</option>
-                                <option value="comics">Comics</option>
-                                <option value="events">Events</option>
-                                <option value="tv-series">Tv Series</option>
-                                <option value="movies">Movies</option>
-                            </select>
-                        </fieldset>
-                        <button id= "button" type="submit" class="button is-warning is-outlined">Hulk Smash Me!</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <section class="columns">
-        <div id="listContainer" class="column is-2 ml-3 mt-3 has-background-dark">
-            <h2 class="title is-4 p-2 has-text-white has-text-centered is-underlined">Previous Searches:</h2>      
-                <div class="listHolder has-text-white is-clickable"></div>    
+      <!-- Character Input -->
+      <section class="hero is-danger is-medium">
+        <span class="material-symbols-outlined"> sailing </span>
+        <div class="hero-body">
+          <div class="container has-text-centered m-3">
+            <p class="title">M'arr'vel Tracker</p>
+            <form id="user-form" class="form w-100">
+              <input
+                id="heroName"
+                class="form-input w-100"
+                type="text"
+                placeholder="Search!"
+              />
+              <fieldset>
+                <select name="format-input" id="format w-100">
+                  <option value="" disabled selected>Select a format..</option>
+                  <option value="comics">Comics</option>
+                  <option value="events">Events</option>
+                  <option value="tv-series">Tv Series</option>
+                  <option value="movies">Movies</option>
+                </select>
+              </fieldset>
+              <button
+                id="button"
+                type="submit"
+                class="button is-warning is-outlined"
+              >
+                Hulk Smash Me!
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Saved Character Inputs -->
+      <section class="columns">
+        <div
+          id="listContainer"
+          class="column is-2 ml-3 mt-3 has-background-dark"
+        >
+          <h2
+            class="title is-4 p-2 has-text-white has-text-centered is-underlined"
+          >
+            Previous Searches:
+          </h2>
+          <div class="listHolder has-text-white is-clickable"></div>
         </div>
         <div>
-            <div id = "characterInfo" class="column is-full mt-3 has-background-dark" >
-                <h2 class="title has-text-white has-text-centered is-underlined mt-2 is-3 p-2">Character Info:</h2>
-                <img id="thumbnail" class="has-text-centered" src =>
-                <h3 id="name" class="title has-text-white has-text-centered is-3"></h3>
-                <p id="description" class="has-text-white has-text-centered is-3"></p>
-            </div>
+          <!-- Character Information -->
+          <div
+            id="characterInfo"
+            class="column is-full mt-3 has-background-dark"
+          >
+            <h2
+              class="title has-text-white has-text-centered is-underlined mt-2 is-3 p-2"
+            >
+              Character Info:
+            </h2>
+            <img id="thumbnail" class="has-text-centered" src =>
+            <h3
+              id="name"
+              class="title has-text-white has-text-centered is-3"
+            ></h3>
+            <p
+              id="description"
+              class="has-text-white has-text-centered is-3"
+            ></p>
+          </div>
         </div>
-        </section>
+      </section>
     </main>
-    <!-- <footer class="container has-text-centered">
-        <img src="assets/Images/Marvel_Cinematic_Universe.png">
-    </footer> -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
-<script src="./assets/autocomplete.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+    <script src="./assets/autocomplete.js"></script>
     <script src="./assets/script.js"></script>
     <script>
-        autocomplete(document.getElementById("heroName"), heroesArr);
+      autocomplete(document.getElementById("heroName"), heroesArr);
     </script>
-</body>
-
+  </body>
 </html>
