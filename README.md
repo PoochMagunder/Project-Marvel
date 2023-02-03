@@ -7,6 +7,12 @@ A website that allows you to get an image of your favorite Marvel superhero, alo
 - Live Link: https://poochmagunder.github.io/Project-Marvel/
 - Github URL: https://github.com/PoochMagunder/Project-Marvel
 
+
+## Layout of Deployed Site
+
+![Image displaying the layout of the website](assets/Images/deployed-site.png)
+
+
 ## Features
 
 - Display information about your favorite Marvel characters
