@@ -35,6 +35,7 @@ A website that allows you to get an image of your favorite Marvel superhero, alo
 - Bulma
 - Marvel API
 - Open API
+- Superhero API
 
 ## Credits
 
