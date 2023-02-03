@@ -8,6 +8,7 @@
 /* Character Input section */
 fieldset {
   border: 0;
+  display: none;
 }
 
 .overflow {
@@ -94,10 +95,10 @@ p {
   }
   img {
     max-width: 100vw;
-    max-height: 763px;
+    max-height: 500px;
   }
   #listContainer {
-    height: 23vh;
+    height: 35vh;
   }
   .material-symbols-outlined {
     margin: auto;
@@ -116,11 +117,11 @@ p {
 
   img {
     max-width: 99vw;
-    max-height: 763px;
+    max-height: 330px;
   }
 
   #listContainer {
-    height: 23vh;
+    height: 30vh;
   }
 }
 
