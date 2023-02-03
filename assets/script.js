@@ -23,10 +23,6 @@ function fetchData(nameStartsWith) {
       let description = document.getElementById("description");
       let thumbnail = document.getElementById("thumbnail");
 
-      // call pirate function to get the updated description
-      let pDescription = ch_data.data.results[0].description;
-      convertToPirateLanguage(pDescription);
-
       // set the name, description, and thumbnail elements
       heroName.textContent = ch_data.data.results[0].name;
       description.textContent = ch_data.data.results[0].description;
@@ -34,11 +30,15 @@ function fetchData(nameStartsWith) {
         ch_data.data.results[0].thumbnail.path +
         "." +
         ch_data.data.results[0].thumbnail.extension;
+
+      // calls eyecolor function to get the eye color of the superhero and change the border of the image to that color
+      getEyeColor(nameStartsWith);
+
     });
 }
 
 // function that takes the characters description and converts in like it was written by a pirate
-// uses open AI model engine to execute 
+// unused due to rotating API key
 async function convertToPirateLanguage(pDescription) {
   const inputText = "convert this to pirate-language";
   const openKey = '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';
@@ -64,9 +64,9 @@ async function convertToPirateLanguage(pDescription) {
     .then(response => {
       return response.json();
     });
-    console.log(pDescription);
-    console.log(payload.prompt);
-    console.log(response);
+  console.log(pDescription);
+  console.log(payload.prompt);
+  console.log(response);
   console.log(response.choices[0].text);
   let description = document.getElementById("description");
   // sets variable to json data's specific response
@@ -75,13 +75,28 @@ async function convertToPirateLanguage(pDescription) {
   description.textContent = newDescription;
 }
 
+// fuction to get the hero's eye color and change the style elements on the page based on result
+async function getEyeColor(heroName) {
+  const key = '110595011943951';
+  const url = `https://www.superheroapi.com/api.php/${key}/search/${heroName}`
 
+  const response = await fetch(url)
+    .then(response => {
+      return response.json();
+    });
+
+  console.log(response);
+
+  // sets variable the response specific eye color
+  const eyeColor = response.results[0].appearance['eye-color'];
+  console.log(eyeColor);
+  const thumbnail = document.getElementById("thumbnail");
+  // change border color to superhero eye color
+  thumbnail.style.borderColor = eyeColor;
+
+}
 // Get a reference to the search input element
 const searchInput = document.getElementById("heroName");
-
-
-//     .catch(error => console.log("There was a problem with the fetch operation: ", error));
-// }
 
 //call fetchData function when the button is clicked
 document.getElementById("button").addEventListener("click", function (event) {
