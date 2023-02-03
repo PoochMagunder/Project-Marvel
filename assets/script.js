@@ -141,6 +141,15 @@ function loadStorage() {
     listItem.innerHTML = search;
     listHolder.appendChild(listItem);
   });
+  // added a clear button to clear search history stored in local storage
+  let clearButton = document.createElement("button");
+  clearButton.className = "button is-small is-warning is-outlined";
+  clearButton.innerHTML = "Clear Searches";
+  clearButton.addEventListener("click", function () {
+    localStorage.removeItem("savedSearches");
+    listHolder.innerHTML = "";
+  });
+  listHolder.appendChild(clearButton);
 }
 
 var searchHistoryList = function (heroName) {
